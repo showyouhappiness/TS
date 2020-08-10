@@ -1,4 +1,12 @@
 {
+    // tsc calculator.ts   
+    // tsc -w calculator.ts  实时更新
+    // npm i -g http-server
+    // http-server . -c-1
+    // let a: number = 3
+    // console.log(a)
+    // '0123456789'.split('') //['0','1','2','3','4','5','6','7','8','9']
+
     //创建container
     let container: HTMLDivElement = document.createElement('div');
     container.classList.add('container');
