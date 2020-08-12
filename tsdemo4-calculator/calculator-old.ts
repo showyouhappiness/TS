@@ -7,10 +7,25 @@
     // console.log(a)
     // '0123456789'.split('') //['0','1','2','3','4','5','6','7','8','9']
 
+    //声明 n1 n2 operator
+    let n1: number;
+    let n2: number;
+    let operator: string;
+    let result: string = '';
+
     //创建container
     let container: HTMLDivElement = document.createElement('div');
     container.classList.add('container');
     document.body.appendChild(container);
+
+    //创建output
+    let output: HTMLDivElement = document.createElement('div');
+    output.classList.add('output');
+    //创建 outout 里的 span
+    let span: HTMLSpanElement = document.createElement('span');
+    output.appendChild(span);
+    span.textContent = '0';
+    container.appendChild(output);
 
     //声明创建按钮函数
     function createButton(text: string, container: HTMLElement, className: string) {
@@ -22,19 +37,6 @@
         container.appendChild(button);
         return button;
     }
-
-    //创建output
-    let output: HTMLDivElement = document.createElement('div');
-    output.classList.add('output');
-
-    //创建 outout 里的 span
-    let span: HTMLSpanElement = document.createElement('span');
-    span.textContent = '0';
-
-    //声明 n1 n2 operator
-    let n1: number;
-    let n2: number;
-    let operator: string;
 
     //监听 container
     container.addEventListener('click', function (event) {
@@ -76,7 +78,6 @@
                 }
                 span.textContent = result.toString();
             }
-            console.log(operator, n1, n2);
         }
     });
 

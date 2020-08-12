@@ -6,10 +6,23 @@
     // let a: number = 3
     // console.log(a)
     // '0123456789'.split('') //['0','1','2','3','4','5','6','7','8','9']
+    //声明 n1 n2 operator
+    var n1_1;
+    var n2_1;
+    var operator_1;
+    var result = '';
     //创建container
     var container_1 = document.createElement('div');
     container_1.classList.add('container');
     document.body.appendChild(container_1);
+    //创建output
+    var output = document.createElement('div');
+    output.classList.add('output');
+    //创建 outout 里的 span
+    var span_1 = document.createElement('span');
+    output.appendChild(span_1);
+    span_1.textContent = '0';
+    container_1.appendChild(output);
     //声明创建按钮函数
     function createButton(text, container, className) {
         var button = document.createElement('button');
@@ -20,16 +33,6 @@
         container.appendChild(button);
         return button;
     }
-    //创建output
-    var output = document.createElement('div');
-    output.classList.add('output');
-    //创建 outout 里的 span
-    var span_1 = document.createElement('span');
-    span_1.textContent = '0';
-    //声明 n1 n2 operator
-    var n1_1;
-    var n2_1;
-    var operator_1;
     //监听 container
     container_1.addEventListener('click', function (event) {
         if (event.target instanceof HTMLButtonElement) {
@@ -63,22 +66,21 @@
             }
             else if ('='.indexOf(text) >= 0) {
                 //更新结果
-                var result = void 0;
+                var result_1;
                 if (operator_1 === '+') {
-                    result = n1_1 + n2_1;
+                    result_1 = n1_1 + n2_1;
                 }
                 else if (operator_1 === '-') {
-                    result = n1_1 - n2_1;
+                    result_1 = n1_1 - n2_1;
                 }
                 else if (operator_1 === '×') {
-                    result = n1_1 * n2_1;
+                    result_1 = n1_1 * n2_1;
                 }
                 else if (operator_1 === '÷') {
-                    result = n1_1 / n2_1;
+                    result_1 = n1_1 / n2_1;
                 }
-                span_1.textContent = result.toString();
+                span_1.textContent = result_1.toString();
             }
-            console.log(operator_1, n1_1, n2_1);
         }
     });
     // 声明所有按钮
