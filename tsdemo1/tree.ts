@@ -2,17 +2,21 @@
 function creatsTabs(n: number): string {
     return '----'.repeat(n)
 }
+
 class Person {
-    public children: Person[] = []
-    constructor(public name) { }
+    public children: Person[] = [];
+
+    constructor(public name: string) {
+    }
+
     addChild(child: Person): void {
         this.children.push(child)
     }
+
     introduceFamily(n?: number): void {
         n = n || 0;
         console.log(`${creatsTabs(n)}${this.name}`);
-        this.children.forEach(
-            Person => {
+        this.children.forEach(Person => {
                 Person.introduceFamily(n + 1);
             }
         )
