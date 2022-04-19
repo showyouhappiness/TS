@@ -20,8 +20,8 @@
     output.classList.add('output');
     //创建 outout 里的 span
     var span_1 = document.createElement('span');
-    output.appendChild(span_1);
     span_1.textContent = '0';
+    output.appendChild(span_1);
     container_1.appendChild(output);
     //声明创建按钮函数
     function createButton(text, container, className) {
@@ -80,6 +80,12 @@
                     result_1 = n1_1 / n2_1;
                 }
                 span_1.textContent = result_1.toString();
+            }
+            else if ('clear'.indexOf(text) > 0) {
+                var n1_2 = null;
+                var n2_2 = null;
+                var operator_2 = null;
+                var result_2 = '';
             }
         }
     });

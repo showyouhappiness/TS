@@ -73,14 +73,14 @@
                         _this.n2 = '';
                         _this.operator = '';
                     }
-                    else if (text === 'Clear') {
+                    else if (text === 'clear') {
                         _this.n1 = '';
                         _this.n2 = '';
                         _this.operator = '';
                         _this.result = '';
                         _this.span.textContent = '0';
                     }
-                    console.log(_this.n1, _this.n2, _this.operator);
+                    console.log(_this.n1, _this.operator, _this.n2, _this.result);
                 }
             });
         };

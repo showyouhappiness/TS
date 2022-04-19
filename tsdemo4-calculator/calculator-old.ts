@@ -23,8 +23,8 @@
     output.classList.add('output');
     //创建 outout 里的 span
     let span: HTMLSpanElement = document.createElement('span');
-    output.appendChild(span);
     span.textContent = '0';
+    output.appendChild(span);
     container.appendChild(output);
 
     //声明创建按钮函数
@@ -77,6 +77,11 @@
                     result = n1 / n2;
                 }
                 span.textContent = result.toString();
+            } else if ('clear'.indexOf(text) > 0) {
+                let n1: number = null;
+                let n2: number = null;
+                let operator: string = null;
+                let result: string = '';
             }
         }
     });
